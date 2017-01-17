@@ -1,14 +1,13 @@
 package ruolan.com.svgdemo;
 
 import android.graphics.Typeface;
-import android.support.annotation.MenuRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class SvgActivity extends AppCompatActivity {
 
     private TextView mTextView;
     boolean isSelected = false;
@@ -33,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!isSelected) {  //未收藏
                     isSelected = true;
-                    Toast.makeText(MainActivity.this, "我已经收藏了", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SvgActivity.this, "我已经收藏了", Toast.LENGTH_SHORT).show();
                     mTextView.setText(getResources().getString(R.string.icon_like_selected));
                 } else {
                     isSelected = false;
-                    Toast.makeText(MainActivity.this, "我已经取消收藏了", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SvgActivity.this, "我已经取消收藏了", Toast.LENGTH_SHORT).show();
                     mTextView.setText(getResources().getString(R.string.icon_like_normal));
                 }
             }
